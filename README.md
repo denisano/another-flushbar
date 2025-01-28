@@ -51,7 +51,7 @@ progressIndicatorValueColor | a [LinearProgressIndicator] configuration paramete
 barBlur | Default is 0.0. If different than 0.0, blurs only Flushbar's background. To take effect, make sure your [backgroundColor] has some opacity. The greater the value, the greater the blur.
 blockBackgroundInteraction | Determines if user can interact with the screen behind it. If this is false, [routeBlur] and [routeColor] will be ignored
 routeBlur | Default is 0.0. If different than 0.0, creates a blurred overlay that prevents the user from interacting with the screen. The greater the value, the greater the blur. It does not take effect if [blockBackgroundInteraction] is false
-routeColor | Default is [Colors.transparent]. Only takes effect if [routeBlur] > 0.0. Make sure you use a color with transparency e.g. `Colors.grey[600].withOpacity(0.2)`. It does not take effect if [blockBackgroundInteraction] is false
+routeColor | Default is [Colors.transparent]. Only takes effect if [routeBlur] > 0.0. Make sure you use a color with transparency e.g. `Colors.grey[600].withValues(alpha:0.2)`. It does not take effect if [blockBackgroundInteraction] is false
 userInputForm | A [TextFormField] in case you want a simple user input. Every other widget is ignored if this is not null.
 onStatusChanged | a callback for you to listen to the different Flushbar status
 
