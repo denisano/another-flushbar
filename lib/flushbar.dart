@@ -16,7 +16,7 @@ typedef OnTap = void Function(Flushbar flushbar);
 // ignore: must_be_immutable
 class Flushbar<T> extends StatefulWidget {
   Flushbar(
-      {Key? key,
+      {super.key,
       this.title,
       this.safeArea = true,
       this.titleColor,
@@ -64,8 +64,7 @@ class Flushbar<T> extends StatefulWidget {
       this.flushbarRoute // Please dont init this
       })
       // ignore: prefer_initializing_formals
-      : onStatusChanged = onStatusChanged,
-        super(key: key) {
+      : onStatusChanged = onStatusChanged {
     onStatusChanged = onStatusChanged ?? (status) {};
   }
 
@@ -211,7 +210,7 @@ class Flushbar<T> extends StatefulWidget {
   final double? routeBlur;
 
   /// Default is [Colors.transparent]. Only takes effect if [routeBlur] > 0.0.
-  /// Make sure you use a color with transparency here e.g. Colors.grey[600].withOpacity(0.2).
+  /// Make sure you use a color with transparency here e.g. Colors.grey[600].withValues(alpha:0.2).
   /// It does not take effect if [blockBackgroundInteraction] is false
   final Color? routeColor;
 
